@@ -1,4 +1,4 @@
-var cardEdit =
+let cardEdit =
 {
 	node: document.getElementById('card-edit')
 	, windowOverlay: document.getElementById('container-main')
@@ -29,7 +29,7 @@ cardEdit.show = function () {
 //This function will submit the edited text
 cardEdit.submit = function (evt) {
 	evt.preventDefault()
-	var title = cardEdit.titleNode.value.trim();
+	let title = cardEdit.titleNode.value.trim();
 	let desc = cardEdit.descNode.value.trim();
 	if (title) {
 		cardEdit.card.title = title;

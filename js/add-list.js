@@ -1,7 +1,7 @@
 //This function will called on adding the list on the board
 function addListtoDo(board) {
 	return function () {
-		var titleInput = document.getElementById('toDo-list-input')
+		let titleInput = document.getElementById('toDo-list-input')
 
 		document.getElementById('toDo-list-title-submit').onclick = titleButtonClick
 		board.titleFormNode.style.display = 'block'
@@ -10,7 +10,7 @@ function addListtoDo(board) {
 		function titleButtonClick(evt) {
 			debugger;
 			evt.preventDefault()
-			var title = titleInput.value.trim()
+			let title = titleInput.value.trim()
 				, index = board.lists.length - 1
 				, list
 

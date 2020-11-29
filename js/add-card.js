@@ -4,9 +4,9 @@
 
 function addCardtoDo(list) {
 	return function () {
-		var titleTextarea = list.titleFormNode
+		let titleTextarea = list.titleFormNode
 			.getElementsByClassName('toDo-new-card-title-input')[0]
-		var descTextarea = list.titleFormNode
+		let descTextarea = list.titleFormNode
 			.getElementsByClassName('toDo-new-card-desc-input')[0]
 		list.titleFormNode.getElementsByClassName('toDo-new-card-title-submit')[0]
 			.onclick = titleSubmit
@@ -15,7 +15,7 @@ function addCardtoDo(list) {
 
 		function titleSubmit(evt) {
 			evt.preventDefault()
-			var title = titleTextarea.value.trim(),
+			let title = titleTextarea.value.trim(),
 			desc = descTextarea.value.trim()
 				, card;
 

@@ -1,4 +1,4 @@
-var dragTracker =
+let dragTracker =
 {
 	id: undefined
 	, list: undefined
@@ -6,7 +6,7 @@ var dragTracker =
 
 //this function will build the card node
 function buildCardNode() {
-	var node = document.createElement('div')
+	let node = document.createElement('div')
 	node.draggable = true
 	node.innerHTML =
 		'<div class="card-title"></div>';
@@ -47,7 +47,7 @@ function Card(list, title, desc) {
 
 	this.node.ondrop = (function (board) {
 		return function (evt) {
-			var id = dragTracker.id
+			let id = dragTracker.id
 				, targetId = this.getAttribute('card-id') // 'this' is target of drop
 				, source = board.cards[id]
 				, target = board.cards[targetId]

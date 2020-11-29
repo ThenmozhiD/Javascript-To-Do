@@ -1,11 +1,11 @@
 /*
  This function deletes the card
  */
-var cardDeletetoDo = {};
-var currentBoard;
+let cardDeletetoDo = {};
+let currentBoard;
 
 cardDeletetoDo.delete = function () {
-	var index = currentBoard.cards[cardEdit.card.id].index
+	let index = currentBoard.cards[cardEdit.card.id].index
 
 	currentBoard.unregisterCard(cardEdit.card)
 	currentBoard.reregisterSubsequent(cardEdit.card.list, index + 1, -1)

@@ -2,7 +2,7 @@
  This function is called to build the card form
  */
 function buildCardTitleForm() {
-	var node = document.createElement('form')
+	let node = document.createElement('form')
 	node.innerHTML =
 		'<div class="newitem-title-wrapper">' +
 		'<textarea placeholder="Card Title" class="toDo-new-card-title-input" type="text"></textarea>' +

@@ -28,7 +28,7 @@
 
 	Board.prototype.render = function () {
 		this.lists.push(new List(this, 'Add a list...', 0, true))
-		for (var i = 0; i < this.lists.length; ++i) {
+		for (let i = 0; i < this.lists.length; ++i) {
 			this.listsNode.appendChild(this.lists[i].node);
 		}
 		this.lists[this.lists.length - 1].node.appendChild(this.titleFormNode)
@@ -47,7 +47,7 @@
 	}
 
 	Board.prototype.reregisterSubsequent = function (list, index, shift) {
-		for (var i = index; i < list.cards.length; ++i) {
+		for (let i = index; i < list.cards.length; ++i) {
 			this.registerCard(list.cards[i], i + shift)
 		}
 	}
@@ -75,7 +75,7 @@
 
 	//Onloading the document render the board.The code starts from here
 	document.body.onload = function () {
-		var title = 'Add New Board'
+		let title = 'Add New Board'
 			, board = new Board(title)
 
 		board.render()

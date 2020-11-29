@@ -14,7 +14,7 @@ function List(board, title, index, dummyList) {
 	this.node.appendChild(this.titleNode)
 
 	if (!dummyList) {
-		var dummyCard = new Card(this, 'Add a card...', 0)
+		let dummyCard = new Card(this, 'Add a card...', 0)
 
 		this.titleNode.draggable = true
 		this.cards = [dummyCard]
@@ -23,7 +23,7 @@ function List(board, title, index, dummyList) {
 		// new card title form
 		this.titleFormNode = buildCardTitleForm()
 
-		for (var i = 0; i < this.cards.length; ++i) {
+		for (let i = 0; i < this.cards.length; ++i) {
 			this.cardsNode.appendChild(this.cards[i].node)
 		}
 		dummyCard.titleNode.onclick = addCardtoDo(this)
@@ -35,7 +35,7 @@ function List(board, title, index, dummyList) {
 
 	// drag-drop handlers
 	this.titleNode.ondragstart = function (evt) {
-		var index = parseInt(evt.target.getAttribute('list-index'), 10)
+		let index = parseInt(evt.target.getAttribute('list-index'), 10)
 		dragTracker.list = currentBoard.lists[index]
 		evt.dataTransfer.effectAllowed = 'move'
 	}
@@ -47,7 +47,7 @@ function List(board, title, index, dummyList) {
 	}
 
 	this.titleNode.ondrop = function (evt) {
-		var sourceIndex = dragTracker.list.index
+		let sourceIndex = dragTracker.list.index
 			, targetIndex = parseInt(this.getAttribute('list-index'), 10)
 			, numLists = board.lists.length
 			, i
